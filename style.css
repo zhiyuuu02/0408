@@ -1,0 +1,72 @@
+/* 新增選單的樣式 */
+  .menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #caf0f8; /* 設定選單背景顏色 */
+}
+
+.menu li {
+    position: relative; /* 為了讓子選單定位 */
+    font-size: 30px;
+    margin-left: 50px;
+    cursor: pointer;
+    color: #03045e; /* 設定文字顏色 */
+    background-color: #caf0f8; /* 滑鼠離開時背景顏色 */
+}
+
+.menu li ul {
+    display: none; /* 預設隱藏子選單 */
+    position: absolute;
+    top: 100%; /* 子選單顯示在主選單下方 */
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #caf0f8; /* 子選單背景顏色 */
+}
+
+.menu li:hover ul {
+    display: block; /* 滑鼠移入時顯示子選單 */
+}
+
+.menu li ul li {
+    font-size: 20px; /* 子選單文字大小 */
+    margin: 0; /* 子選單項目間距 */
+    padding: 10px; /* 子選單項目內距 */
+    cursor: pointer;
+    color: #03045e; /* 子選單文字顏色 */
+    background-color: #caf0f8; /* 子選單背景顏色 */
+}
+
+.menu li ul li:hover {
+    background-color: #90e0ef; /* 滑鼠滑入子選單時背景顏色 */
+    color: #03045e; /* 滑鼠滑入子選單時文字顏色 */
+}
+
+.menu li:hover {
+    background-color: #90e0ef; /* 滑鼠滑入時背景顏色 */
+    color: #03045e; /* 滑鼠滑入時文字顏色 */
+}
+body {
+    background-color: #0096c7; /* 設定整個網頁背景顏色 */
+    margin: 0;
+    padding: 0;
+    position: relative; /* 設定相對定位以控制子元素層級 */
+}
+
+iframe {
+    width: 80%; /* 設定iframe寬度為視窗的80% */
+    height: calc(100vh - 150px); /* 高度上方留150px */
+    border: none;
+    background-color: transparent; /* 設定iframe背景透明 */
+    position: absolute;
+    top: 150px; /* 距離頂部150px */
+    left: 10%; /* 水平置中 */
+    display: none; /* 初始隱藏iframe */
+    z-index: 2; /* iframe在第二層 */
+}
