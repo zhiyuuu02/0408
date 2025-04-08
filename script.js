@@ -19,5 +19,5 @@ const img = document.getElementById("img");
 let i=1;
 function keepRunning() {
     i = (i % 8) + 1;
-    img.src = `IMG/penguin_walk_0${i}.png`;
+    img.src = `penguin_walk_0${i}.png`;
   }
